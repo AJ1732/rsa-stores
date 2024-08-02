@@ -1,3 +1,9 @@
+// LAYOUT COMPONENTS
+export { default as Navbar } from "./layout/Navbar";
+export { default as Footer } from "./layout/Footer";
+
+
+// UI COMPONENTS
 export { default as Button } from "./ui-build/Button";
 export { default as CartCard } from "./ui-build/Card/CartCard";
 export { default as ProductCard } from "./ui-build/Card/ProductCard";

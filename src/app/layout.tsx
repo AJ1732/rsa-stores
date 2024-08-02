@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Footer, Navbar } from "@/components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,9 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} content-grid font-satoshi`}>
-        <header className="py-6">Header</header>
+        <Navbar />
         {children}
-        <footer className="py-20">Footer</footer>
+        <Footer />
       </body>
     </html>
   );
