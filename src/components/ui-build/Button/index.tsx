@@ -1,11 +1,19 @@
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-interface ButtonProps {
-  className?: string;
-  children: React.ReactNode
-  onClick?: () => void
-}
-
-export default function ButtonDemo({ className, children, onClick }: ButtonProps) {
-  return <Button className={className} onClick={onClick}>{children}</Button>;
+export default function ButtonDemo({
+  label,
+  disabled,
+  className,
+  onClick,
+}: ButtonProps) {
+  return (
+    <Button
+      onClick={onClick}
+      disabled={disabled}
+      className={cn("rounded-full px-6 py-3", className)}
+    >
+      {label}
+    </Button>
+  );
 }
