@@ -1,4 +1,101 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("/fonts/Integral_CF/Fontspring-DEMO-integralcf-bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi/Satoshi-Light.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi/Satoshi-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi/Satoshi-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi/Satoshi-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi/Satoshi-Black.otf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 77.5rem;
+  --layout-max-width: 90rem;
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    minmax(var(--padding-inline), 1fr)
+    [content-start]
+    min(100% - (var(--padding-inline) * 2), var(--content-max-width))
+    [content-end]
+    minmax(var(--padding-inline), 1fr)
+    [full-width-end];
+}
+.content-grid > :not(.full-width) {
+  grid-column: content;
+}
+.content-grid > .full-width {
+  grid-column: full-width;
+}
+
+/* 
+BLACK GRADIENT
+background: -webkit-linear-gradient(90deg,#0f1116,#1a1b22); 
+background: linear-gradient(90deg,#0f1116,#1a1b22);  */
+
+/* BLACK WHITE GRADIENT */
+/* background: -webkit-linear-gradient(90deg,#333333,#000000); 
+background: linear-gradient(90deg,#333333,#000000); */
+
+/* REVERSE BLACK WHITE GRADIENT */
+/* background: -webkit-linear-gradient(270deg,#333333,#000000); 
+background: linear-gradient(270deg,#333333,#000000); */
+
+/* BLUE BLACK GRADIENT */
+/* background: -webkit-linear-gradient(90deg,#090f30,#000000,#190631);
+background: linear-gradient(90deg,#090f30,#000000,#190631); */
+
+/* LIGHT BLACK GRADIENT */
+/* background: -webkit-linear-gradient(90deg,#0b0d0f,#1a1d21,#292e36); 
+background: linear-gradient(90deg,#0b0d0f,#1a1d21,#292e36); */
+
+/* BLUE GRDAIENT */
+/* background: -webkit-linear-gradient(90deg,#001a43,#001a43,#192850,#004196); background: linear-gradient(90deg,#001a43,#001a43,#192850,#004196); */
+
+/* GREEN GRADIENT */
+/* background: -webkit-linear-gradient(132deg,#000000,#03300e,#004d32); 
+background: linear-gradient(132deg,#000000,#03300e,#004d32); */
+
+/* background: -webkit-linear-gradient(0deg,#1a191a,#1a191a,#1a191a,#263b42); 
+background: linear-gradient(0deg,#1a191a,#1a191a,#1a191a,#263b42); */
+
+/* background: -webkit-linear-gradient(90deg,#011100,#003c01);  
+background: linear-gradient(90deg,#011100,#003c01); */

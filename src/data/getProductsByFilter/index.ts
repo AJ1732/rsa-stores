@@ -15,8 +15,6 @@ const getProductsByFilter = async (
   if (price_min !== 0) params.append("price_min", price_min.toString());
   if (price_max !== 0) params.append("price_max", price_max.toString());
 
-  console.log(params.toString());
-
   const url = `https://api.escuelajs.co/api/v1/products/?${params.toString()}`;
 
   const response = await fetch(url);
