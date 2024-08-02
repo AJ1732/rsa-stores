@@ -11,7 +11,7 @@ export default async function Home() {
   );
 
   // Majestic Mountain Graphic T-Shirt
-  console.log(category);
+  // console.log(category);
   // console.log(filteredProductsByTitle);
 
   return (
