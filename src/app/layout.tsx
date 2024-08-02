@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: "Rsa Stores",
     url: "https://1732-rsa-stores.vercel.app/",
     description: "Website displaying posts from a free and reliable fake API",
-    images: "https://aj1732.github.io/jsonplaceholder_posts/public/favicon_io/android-chrome-192x192.png",
+    images: "https://aj1732.github.io/rsa-stores/public/favicon_io/android-chrome-192x192.png",
   },
   icons: {
     icon: ["/favicon_io/favicon.ico?v=4"],
