@@ -52,7 +52,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     }
 
     return (
-      <div className="relative w-full">
+      <div className="relative">
         {startIcon && (
           <div className="absolute left-4 top-1/2 -translate-y-1/2 transform">
             {React.cloneElement(startIcon as React.ReactElement, {
