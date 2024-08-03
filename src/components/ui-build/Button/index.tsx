@@ -11,7 +11,7 @@ export default function ButtonDemo({
     <Button
       onClick={onClick}
       disabled={disabled}
-      className={cn("rounded-full px-6 py-3", className)}
+      className={cn("rounded-full active:scale-[0.99] duration-300 transition-all px-6 py-3", className)}
     >
       {label}
     </Button>

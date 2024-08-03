@@ -34,7 +34,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} content-grid font-satoshi`}>
         <Navbar />
-        {children}
+        <main className="full-width content-grid mt-[4.5rem] md:mt-20 lg:mt-[6.5rem]">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

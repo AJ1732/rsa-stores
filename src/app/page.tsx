@@ -2,7 +2,7 @@ import { HeroSection, CTASection } from "@/components";
 
 export default async function Home() {
   return (
-    <main className="mt-[4.5rem] min-h-[calc(100dvh-100px)] text-neutral-950 md:mt-20 lg:mt-24">
+    <div className="full-width content-grid min-h-[calc(100dvh-100px)] text-neutral-950">
       <HeroSection />
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione ullam
@@ -52,6 +52,6 @@ export default async function Home() {
         dolor ab accusantium. Sint?
       </p>
       <CTASection />
-    </main>
+    </div>
   );
 }
