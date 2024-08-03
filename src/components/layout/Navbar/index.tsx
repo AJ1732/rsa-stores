@@ -21,7 +21,7 @@ const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
 
   return (
-    <header className="content-grid fixed w-full bg-white">
+    <header className="content-grid fixed z-50 w-full bg-white">
       <nav className="flex items-center justify-between gap-4 py-3 md:py-4 lg:py-6">
         <div className="flex items-center justify-between gap-8">
           {/* MOBILE TOGGLE */}

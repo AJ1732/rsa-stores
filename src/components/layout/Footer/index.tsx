@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="mt-8 flex gap-4 text-black">
             {socialIcons.map((icon, i) => (
               <div
-                key={i}
+                key={`social-${i}`}
                 className="group rounded-full border border-[#CCC] bg-white p-2 *:size-4 hover:border-black hover:bg-black hover:*:text-white"
               >
                 {icon}
@@ -48,7 +48,7 @@ const Footer = () => {
 
               <ul className="space-y-4">
                 {link.map((item, i) => (
-                  <li key={i} className="capitalize">
+                  <li key={`footer-link-${i}`} className="capitalize">
                     {item}
                   </li>
                 ))}
