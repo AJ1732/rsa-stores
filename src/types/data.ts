@@ -21,3 +21,13 @@ export type UserProps = {
   role: string;
   avatar: string;
 };
+
+export interface ProductFilterProps {
+  title?: string;
+  price?: number;
+  price_min?: number;
+  price_max?: number;
+  offset?: number;
+  limit?: number;
+  categoryId?: number
+}
