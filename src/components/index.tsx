@@ -5,6 +5,7 @@ export { default as Footer } from "./layout/Footer";
 // SECTION COMPONENTS
 export { default as HeroSection } from "./sections/Home/HeroSection";
 export { default as CTASection } from "./sections/Home/CTASection";
+export { default as CategorySection } from "./sections/Home/CategorySection";
 
 // UI COMPONENTS
 export { default as Button } from "./ui-build/Button";
