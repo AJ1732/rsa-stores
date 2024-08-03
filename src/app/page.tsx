@@ -1,4 +1,4 @@
-import { HeroSection, CTASection } from "@/components";
+import { HeroSection, CTASection, CategorySection } from "@/components";
 
 export default async function Home() {
   return (
@@ -51,6 +51,7 @@ export default async function Home() {
         omnis ipsum a at, harum odio voluptatum deserunt officiis, facilis vel
         dolor ab accusantium. Sint?
       </p>
+      <CategorySection />
       <CTASection />
     </div>
   );
