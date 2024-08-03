@@ -2,6 +2,8 @@
 export { default as Navbar } from "./layout/Navbar";
 export { default as Footer } from "./layout/Footer";
 
+// SECTION COMPONENTS
+export { default as CTASection } from "./sections/Home/CTASection";
 
 // UI COMPONENTS
 export { default as Button } from "./ui-build/Button";
