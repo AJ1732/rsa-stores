@@ -34,7 +34,7 @@ const Navbar = () => {
 
           {/* LOGO */}
           <Link href={`/`}>
-            <h1 className="mb-2 font-integral text-[2rem]">RSA</h1>
+            <h1 className="lg:mb-2 my-auto font-integral text-2xl lg:text-[2rem]">RSA</h1>
           </Link>
 
           {/* DESKTOP NAVIGATION */}

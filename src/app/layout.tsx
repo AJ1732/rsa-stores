@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer, Navbar } from "@/components";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,8 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} content-grid font-satoshi`}>
+        <NextTopLoader color="#000" easing="easeInOut" />
         <Navbar />
-        <main className="full-width content-grid mt-[4.5rem] md:mt-20 lg:mt-[6.5rem]">
+        <main className="full-width content-grid mt-[3.5rem] md:mt-[4rem] lg:mt-[6rem]">
           {children}
         </main>
         <Footer />
