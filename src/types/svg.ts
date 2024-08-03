@@ -1,3 +1,3 @@
 interface SVGProps {
-  className: string
+  className?: string
 }
