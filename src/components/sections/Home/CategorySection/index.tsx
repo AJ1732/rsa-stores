@@ -23,10 +23,10 @@ const CategorySection = async () => {
                 {name}
               </h3>
               <Image
+                fill
                 src={image}
-                layout="fill"
-                objectFit="cover"
                 alt="Category Image"
+                style={{ objectFit: "cover" }}
                 className="transition-all duration-300 ease-in-out group-hover:scale-105"
               />
             </figure>
