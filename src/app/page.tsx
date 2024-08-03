@@ -2,7 +2,6 @@ import {
   HeroSection,
   ShopDisplaySection,
   CategorySection,
-  CTASection,
 } from "@/components";
 
 export default async function Home() {
@@ -11,7 +10,6 @@ export default async function Home() {
       <HeroSection />
       <ShopDisplaySection />
       <CategorySection />
-      <CTASection />
     </div>
   );
 }

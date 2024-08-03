@@ -8,9 +8,13 @@ import {
 import { cn } from "@/lib/utils";
 import { ProductCardProps } from "@/types/card";
 import { formatCurrency } from "@/utils/formatCurrency";
+import Image from "next/image";
+import Link from "next/link";
 
 const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   title,
+  src,
   description,
   className,
   price,
@@ -22,7 +26,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
         className,
       )}
     >
-      <figure className="mb-4 h-[10.875rem] w-[10.75rem] rounded-[1.25rem] bg-[#F0EEED] md:h-[18.625rem] md:w-[18.4375rem]"></figure>
+      <Link href={`/shop/${id}`} className="block">
+        <figure className="relative mb-4 h-[10.875rem] w-[10.75rem] overflow-hidden rounded-[1.25rem] bg-[#F0EEED] md:h-[18.625rem] md:w-[18.4375rem]">
+          <Image
+            fill
+            src={src ?? "https://i.imgur.com/QkIa5tT.jpeg"}
+            style={{ objectFit: "contain" }}
+            alt="Product Image"
+          />
+        </figure>
+      </Link>
 
       <CardHeader>
         <CardTitle className="line-clamp-1 text-base md:text-xl">

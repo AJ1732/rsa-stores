@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Footer, Navbar } from "@/components";
+import { CTASection, Footer, Navbar } from "@/components";
 import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -39,6 +39,7 @@ export default function RootLayout({
         <main className="full-width content-grid mt-[3.5rem] md:mt-[4rem] lg:mt-[6rem]">
           {children}
         </main>
+        <CTASection />
         <Footer />
       </body>
     </html>

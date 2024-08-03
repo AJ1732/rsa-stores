@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
 type CardProps = {
-  src?: StaticImageData
+  src?: StaticImageData | string
   title: string;
   description?: string;
   content?: string | React.ReactNode;
@@ -13,5 +13,6 @@ export type CartCardProps = Omit<CardProps, "footer"> & {
   price?: number;
 };;
 export type ProductCardProps = Omit<CardProps, "footer"> & {
+  id: number
   price?: number;
 };;

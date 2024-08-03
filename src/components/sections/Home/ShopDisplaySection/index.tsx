@@ -1,4 +1,4 @@
-import { ProductCard, ScrollContainer } from "@/components";
+import { ProductCard } from "@/components";
 import { getProductsByFilter } from "@/data";
 
 const ShopDisplaySection = async () => {
@@ -13,18 +13,21 @@ const ShopDisplaySection = async () => {
         Our ITEMS
       </h2>
 
-      <ScrollContainer />
-
       <div className="flex gap-5 overflow-x-auto">
-        {products.map(({ id }) => (
-          <ProductCard
-            key={id}
-            title="T-Shirt with Tape Details"
-            description="Elevate your wardrobe with this stylish black t-shirt featuring a striking monochrome mountain range graphic."
-            price={100}
-            className="mb-6"
-          />
-        ))}
+        {products.map(({ id, title, price, description, images }) => {
+          const source = images[0];
+          return (
+            <ProductCard
+              id={id}
+              key={id}
+              title={title}
+              src={source}
+              description={description}
+              price={price}
+              className="mb-6"
+            />
+          );
+        })}
       </div>
     </section>
   );
