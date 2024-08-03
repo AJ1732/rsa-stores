@@ -20,7 +20,7 @@ const Footer = () => {
     <footer className="content-grid full-width -z-[1] divide-y-2 bg-shade-200 py-14 pt-36 text-sm text-black/60">
       <div className="flex items-start justify-between gap-6 py-8 max-lg:flex-col">
         <div className="max-w-[22rem] lg:max-w-[15.5rem]">
-          <h2 className="-mt-3 mb-2 lg:mb-6 font-integral text-3xl lg:text-4xl text-black">RSA</h2>
+          <h2 className="-mt-3 mb-2 lg:mb-6 font-integral text-3xl lg:text-4xl text-black">SHOP.CO</h2>
 
           <p>
             We have clothes that suits your style and which you’re proud to
