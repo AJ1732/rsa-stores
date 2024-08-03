@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useRef } from "react";
 
 const ScrollContainer = () => {
@@ -6,8 +6,8 @@ const ScrollContainer = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div>
-      <div ref={containerRef} className="relative overflow-x-hidden"></div>
+    <div ref={containerRef} className="relative overflow-x-hidden">
+      <h2>Hello</h2>
     </div>
   );
 };
