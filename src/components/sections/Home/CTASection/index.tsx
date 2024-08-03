@@ -8,7 +8,7 @@ const CTASection = () => {
         STAY UPTO DATE ABOUT OUR LATEST OFFERS
       </h2>
 
-      <div className="mx-auto flex w-full flex-col justify-center gap-3 text-white lg:max-w-[22rem]">
+      <div className="max-lg:mx-auto flex w-full flex-col justify-center gap-3 text-white lg:max-w-[22rem]">
         <InputField
           startIcon={<Mail />}
           placeholder="Enter your email address"
