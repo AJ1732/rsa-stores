@@ -18,7 +18,7 @@ const stats = [
 const HeroSection = () => {
   return (
     <section className="full-width content-grid bg-shade-100 pb-28 pt-24">
-      <div className="flex items-center justify-between max-lg:flex-col">
+      <div className="flex items-center justify-between gap-20 max-lg:flex-col lg:gap-8">
         <div className="max-w-[38rem] space-y-12">
           <div className="space-y-8">
             <h2 className="font-integral text-[4rem] leading-[4rem] text-black">
@@ -35,8 +35,8 @@ const HeroSection = () => {
           </div>
 
           <div className="flex items-center justify-between">
-            {stats.map(({ figures, text }) => (
-              <div>
+            {stats.map(({ figures, text }, i) => (
+              <div key={i}>
                 <p className="text-[2.5rem] font-bold">{figures}+</p>
                 <p className="text-black/60">{text}</p>
               </div>
