@@ -24,7 +24,7 @@ const VisaSVG: React.FC<SVGProps> = ({ className }) => {
           height="30.2545"
           rx="5.49062"
           stroke="#D6DCE5"
-          stroke-width="0.224107"
+          strokeWidth="0.224107"
         />
         <path
           id="Visa"
@@ -40,9 +40,9 @@ const VisaSVG: React.FC<SVGProps> = ({ className }) => {
           width="64.9911"
           height="48.4071"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
