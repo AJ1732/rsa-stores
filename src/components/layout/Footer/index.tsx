@@ -9,10 +9,22 @@ import { FaFacebookF, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 import { footerData } from "./constants";
 
 const socialIcons = [
-  <FaTwitter />,
-  <FaFacebookF />,
-  <FaInstagram />,
-  <FaGithub />,
+  {
+    id: 1,
+    icon: <FaTwitter />,
+  },
+  {
+    id: 2,
+    icon: <FaFacebookF />,
+  },
+  {
+    id: 3,
+    icon: <FaInstagram />,
+  },
+  {
+    id: 4,
+    icon: <FaGithub />,
+  },
 ];
 
 const Footer = () => {
@@ -20,7 +32,9 @@ const Footer = () => {
     <footer className="content-grid full-width -z-[1] divide-y-2 bg-shade-200 py-14 pt-36 text-sm text-black/60">
       <div className="flex items-start justify-between gap-6 py-8 max-lg:flex-col">
         <div className="max-w-[22rem] lg:max-w-[15.5rem]">
-          <h2 className="-mt-3 mb-2 lg:mb-6 font-integral text-3xl lg:text-4xl text-black">SHOP.CO</h2>
+          <h2 className="-mt-3 mb-2 font-integral text-3xl text-black lg:mb-6 lg:text-4xl">
+            SHOP.CO
+          </h2>
 
           <p>
             We have clothes that suits your style and which you’re proud to
@@ -28,9 +42,9 @@ const Footer = () => {
           </p>
 
           <div className="mt-8 flex gap-4 text-black">
-            {socialIcons.map((icon, i) => (
+            {socialIcons.map(({ id, icon }, i) => (
               <div
-                key={`social-${i}`}
+                key={`social-${id}`}
                 className="group rounded-full border border-[#CCC] bg-white p-2 *:size-4 hover:border-black hover:bg-black hover:*:text-white"
               >
                 {icon}
