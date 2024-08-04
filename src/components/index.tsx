@@ -15,3 +15,4 @@ export { default as ProductCard } from "./ui-build/Card/ProductCard";
 export { default as InputField } from "./ui-build/Input";
 export { default as ProductCarousel } from "./ui-build/ProductCarousel";
 export { default as Counter } from "./ui-build/Counter";
+export { default as ErrorPage } from "./ui-build/ErrorPage";
