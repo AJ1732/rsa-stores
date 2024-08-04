@@ -1,4 +1,4 @@
-import { Button, InputField } from "@/components";
+import { ButtonLink, InputField } from "@/components";
 import { Mail } from "lucide-react";
 
 const CTASection = () => {
@@ -16,7 +16,7 @@ const CTASection = () => {
             className: "stroke-black/40",
           }}
         />
-        <Button
+        <ButtonLink
           label="Subscribe to Newsletter"
           className="w-full bg-neutral-100 py-6 text-black hover:bg-shade-200"
         />

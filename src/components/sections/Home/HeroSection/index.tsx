@@ -1,4 +1,4 @@
-import { Button, Counter } from "@/components";
+import { ButtonLink, Counter } from "@/components";
 
 const stats = [
   {
@@ -17,9 +17,9 @@ const stats = [
 
 const HeroSection = () => {
   return (
-    <section className="full-width content-grid bg-shade-100 pb-28 pt-24">
+    <section className="full-width content-grid bg-shade-100 pb-28 pt-8 lg:pt-24">
       <div className="flex items-center justify-between gap-20 max-lg:flex-col lg:gap-8">
-        <div className="max-w-[38rem] space-y-12">
+        <div className="max-w-[38rem] space-y-5 lg:space-y-12">
           <div className="space-y-5 lg:space-y-8">
             <h2 className="font-integral text-4xl leading-[2.125rem] text-black max-md:max-w-[22.5rem] md:text-5xl lg:text-[4rem] lg:leading-[4rem]">
               FIND CLOTHES THAT MATCHES YOUR STYLE
@@ -31,16 +31,22 @@ const HeroSection = () => {
               of style.
             </p>
 
-            <Button label="Shop Now" className="w-full px-14 py-4 md:w-fit" />
+            <ButtonLink
+              label="Shop Now"
+              link="/shop"
+              className="w-full px-14 py-4 md:w-fit"
+            />
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 space-x-2 md:justify-between">
             {stats.map(({ figures, text }, i) => (
-              <div key={i} className="w-[9.7rem]">
-                <p className="text-[2.5rem] font-bold ">
+              <div key={i} className="w-[9.7rem] max-lg:first:border-r">
+                <p className="text-2xl font-bold md:text-[2rem] lg:text-[2.5rem]">
                   <Counter from={0} to={figures} />+
                 </p>
-                <p className="text-black/60">{text}</p>
+                <p className="text-xs text-black/60 md:text-sm lg:text-base">
+                  {text}
+                </p>
               </div>
             ))}
           </div>

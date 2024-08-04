@@ -2,7 +2,7 @@ import { ProductCard } from "@/components";
 
 const ShopItemPage = () => {
   return (
-    <div>
+    <div className="pt-8 pb-16">
       <ProductCard id={1} title="T-Shirt with Tape Details" />
     </div>
   );
