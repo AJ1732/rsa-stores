@@ -32,15 +32,19 @@ const ProductCard: React.FC<ProductCardProps> = ({
             fill
             src={src ?? "https://i.imgur.com/QkIa5tT.jpeg"}
             style={{ objectFit: "contain" }}
+            className="transition-all duration-300 hover:scale-105"
             alt="Product Image"
           />
         </figure>
       </Link>
 
       <CardHeader>
-        <CardTitle className="line-clamp-1 text-base md:text-xl">
-          {title}
-        </CardTitle>
+        <Link href={`/shop/${id}`} className="block">
+          <CardTitle className="line-clamp-1 text-base md:text-xl">
+            {title}
+          </CardTitle>
+        </Link>
+
         <CardDescription className="line-clamp-2">
           {description}
         </CardDescription>
