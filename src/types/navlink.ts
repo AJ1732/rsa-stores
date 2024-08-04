@@ -1,4 +1,4 @@
 type NavLinks = {
-  name: string
-  link: string
-}
+  name: string;
+  link: string | string[];
+};

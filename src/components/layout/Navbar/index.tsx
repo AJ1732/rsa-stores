@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 import { InputField } from "@/components";
 import {
   AlignLeft,
@@ -8,12 +9,15 @@ import {
   SearchIcon,
   ShoppingCart,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const navlinks: NavLinks[] = [
   {
     name: "shop",
     link: "/shop",
+  },
+  {
+    name: "categories",
+    link: ["/category/1"],
   },
 ];
 
@@ -34,16 +38,24 @@ const Navbar = () => {
 
           {/* LOGO */}
           <Link href={`/`}>
-            <h1 className="lg:mb-2 my-auto font-integral text-2xl lg:text-[2rem]">SHOP.CO</h1>
+            <h1 className="my-auto font-integral text-2xl lg:mb-2 lg:text-[2rem]">
+              SHOP.CO
+            </h1>
           </Link>
 
           {/* DESKTOP NAVIGATION */}
           <ul className="flex items-center justify-center gap-6 max-lg:hidden">
             {navlinks.map(({ name, link }) => (
               <li key={name} className="text-xl">
-                <Link href={link} className="block">
-                  {name}
-                </Link>
+                {Array.isArray(link) ? (
+                  <div className="relative">
+                    <div className="cursor-pointer">{name}</div>
+                  </div>
+                ) : (
+                  <Link href={link} className="block">
+                    {name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -80,12 +92,16 @@ const Navbar = () => {
         />
 
         <nav className="z-10 h-40 bg-black px-8 py-6 text-white">
-          <ul className="flex flex-col items-center justify-center gap-6">
+          <ul className="flex flex-col items-start justify-center gap-6">
             {navlinks.map(({ name, link }) => (
               <li key={name} className="text-xl">
-                <Link href={link} className="block">
-                  {name}
-                </Link>
+                {Array.isArray(link) ? (
+                  <div>{name}</div>
+                ) : (
+                  <Link href={link} className="block">
+                    {name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
