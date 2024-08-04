@@ -1,4 +1,4 @@
-import { Button } from "@/components";
+import { Button, Counter } from "@/components";
 
 const stats = [
   {
@@ -36,8 +36,10 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-4 space-x-2 md:justify-between">
             {stats.map(({ figures, text }, i) => (
-              <div key={i}>
-                <p className="text-[2.5rem] font-bold">{figures}+</p>
+              <div key={i} className="w-[9.7rem]">
+                <p className="text-[2.5rem] font-bold ">
+                  <Counter from={0} to={figures} />+
+                </p>
                 <p className="text-black/60">{text}</p>
               </div>
             ))}
