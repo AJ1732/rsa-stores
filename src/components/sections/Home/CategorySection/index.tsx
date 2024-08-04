@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { getCategories } from "@/data";
 
@@ -19,9 +20,10 @@ const CategorySection = async () => {
             >
               <div className="absolute inset-0 z-[1] size-full [border-image:linear-gradient(hsl(220_15%_7%_/_0.5),_hsl(230_12%_12%_/_0.6))_fill_1]" />
 
-              <h3 className="absolute left-9 top-6 z-[1] text-2xl font-bold text-white md:text-3xl lg:text-4xl">
+
+              <Link href={`/shop/category/${id}`} className="absolute left-9 top-6 z-[1] text-2xl font-bold text-white md:text-3xl lg:text-4xl">
                 {name}
-              </h3>
+              </Link>
               <Image
                 fill
                 src={image}
