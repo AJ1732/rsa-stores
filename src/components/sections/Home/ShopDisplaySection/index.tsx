@@ -1,4 +1,5 @@
-import { ProductCard, ProductCarousel } from "@/components";
+import Link from "next/link";
+import { Button, ProductCarousel } from "@/components";
 import { getProductsByFilter } from "@/data";
 
 const ShopDisplaySection = async () => {
@@ -14,6 +15,13 @@ const ShopDisplaySection = async () => {
       </h2>
 
       <ProductCarousel products={products} />
+
+      <Link href={`/shop`} className="flex items-center justify-center">
+        <Button
+          label={"View All"}
+          className="border border-black/10 bg-transparent px-14 py-4 text-black hover:bg-shade-200"
+        />
+      </Link>
     </section>
   );
 };
