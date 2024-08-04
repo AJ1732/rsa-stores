@@ -19,7 +19,7 @@ const CategoryItemPage = async ({ params }: Props) => {
 
       <div className="flex flex-wrap items-center justify-center gap-6">
         {products.map((product) => (
-          <ProductCard id={product.id} />
+          <ProductCard key={product.id} id={product.id} />
         ))}
       </div>
     </section>

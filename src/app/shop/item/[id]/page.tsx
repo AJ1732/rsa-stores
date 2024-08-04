@@ -12,7 +12,7 @@ const ShopItemPage = async ({ params }: Props) => {
 
   return (
     <div className="pb-16 pt-12">
-      <ProductCard id={params.id} />
+      <ProductCard key={product.id} id={params.id} />
     </div>
   );
 };
