@@ -18,7 +18,7 @@ const stats = [
 const HeroSection = () => {
   return (
     <section className="full-width content-grid bg-shade-100 pb-28 pt-12 lg:pt-24">
-      <div className="flex items-center justify-between gap-20 max-lg:flex-col lg:gap-8">
+      <div className="flex items-center justify-between gap-12 max-lg:flex-col lg:gap-8">
         <div className="max-w-[38rem] space-y-5 lg:space-y-12">
           <div className="space-y-5 lg:space-y-8">
             <h2 className="font-integral text-4xl leading-[2.125rem] text-black max-md:max-w-[22.5rem] md:text-5xl lg:text-[4rem] lg:leading-[4rem]">
