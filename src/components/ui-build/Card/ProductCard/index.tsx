@@ -5,20 +5,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { getSingleProduct } from "@/data";
 import { ProductCardProps } from "@/types/card";
 import { formatCurrency } from "@/utils/formatCurrency";
-import Image from "next/image";
-import Link from "next/link";
 
-const ProductCard: React.FC<ProductCardProps> = ({
+const ProductCard: React.FC<ProductCardProps> = async ({
   id,
-  title,
-  src,
-  description,
   className,
-  price,
 }) => {
+  const product = await getSingleProduct(id)
+
   return (
     <Card
       className={cn(
@@ -30,7 +29,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         <figure className="relative mb-4 h-[10.875rem] w-[10.75rem] overflow-hidden rounded-[1.25rem] bg-[#F0EEED] md:h-[18.625rem] md:w-[18.4375rem]">
           <Image
             fill
-            src={src ?? "https://i.imgur.com/QkIa5tT.jpeg"}
+            src={product.images[0] ?? "https://i.imgur.com/QkIa5tT.jpeg"}
             style={{ objectFit: "contain" }}
             className="transition-all duration-300 hover:scale-105"
             alt="Product Image"
@@ -41,17 +40,17 @@ const ProductCard: React.FC<ProductCardProps> = ({
       <CardHeader>
         <Link href={`/shop/item/${id}`} className="block">
           <CardTitle className="line-clamp-1 text-base md:text-xl">
-            {title}
+            {product.title}
           </CardTitle>
         </Link>
 
         <CardDescription className="line-clamp-2">
-          {description}
+          {product.description}
         </CardDescription>
       </CardHeader>
 
       <CardContent className="mt-4 text-xl font-bold md:text-2xl">
-        <p>{formatCurrency(price ?? 0)}</p>
+        <p>{formatCurrency(product.price ?? 0)}</p>
       </CardContent>
     </Card>
   );

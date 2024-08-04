@@ -36,12 +36,8 @@ const ProductCarousel: React.FC<Props> = ({ products }) => {
               className="mx-0 flex max-w-[10.75rem] items-center justify-center px-0 md:max-w-[18.5rem]"
             >
               <ProductCard
-                id={id}
                 key={id}
-                title={title}
-                src={source}
-                description={description}
-                price={price}
+                id={id}
               />
             </CarouselItem>
           );

@@ -12,7 +12,7 @@ type CardProps = {
 export type CartCardProps = Omit<CardProps, "footer"> & {
   price?: number;
 };;
-export type ProductCardProps = Omit<CardProps, "footer"> & {
+export type ProductCardProps = Omit<CardProps, "title" | "description" | "content" | "footer"> & {
   id: number
   price?: number;
 };;

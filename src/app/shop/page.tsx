@@ -4,8 +4,8 @@ const ShopPage = () => {
   return (
     <section className="pt-12 pb-16">
       <div className="flex gap-5 overflow-x-auto">
-        <ProductCard id={1} title="T-Shirt with Tape Details" />
-        <ProductCard id={1} title="T-Shirt with Tape Details" />
+        <ProductCard id={1} />
+        <ProductCard id={1} />
       </div>
     </section>
   );
