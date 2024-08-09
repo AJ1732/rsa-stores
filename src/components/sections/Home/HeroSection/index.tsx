@@ -42,7 +42,8 @@ const HeroSection = () => {
             {stats.map(({ figures, text }, i) => (
               <div key={i} className="w-[9.7rem] max-lg:first:border-r">
                 <p className="text-2xl font-bold md:text-[2rem] lg:text-[2.5rem]">
-                  <Counter from={0} to={figures} />+
+                  {/* <Counter from={0} to={figures} />+ */}
+                  {figures}+
                 </p>
                 <p className="text-xs text-black/60 md:text-sm lg:text-base">
                   {text}

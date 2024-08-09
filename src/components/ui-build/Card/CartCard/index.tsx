@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { CartCardProps } from "@/types/card";
-import { formatCurrency } from "@/utils/formatCurrency";
+import { formatCurrency } from "@/lib/formatCurrency";
 
 const CartCard: React.FC<CartCardProps> = ({ title }) => {
   return (

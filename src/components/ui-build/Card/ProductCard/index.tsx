@@ -10,13 +10,10 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { getSingleProduct } from "@/data";
 import { ProductCardProps } from "@/types/card";
-import { formatCurrency } from "@/utils/formatCurrency";
+import { formatCurrency } from "@/lib/formatCurrency";
 
-const ProductCard: React.FC<ProductCardProps> = async ({
-  id,
-  className,
-}) => {
-  const product = await getSingleProduct(id)
+const ProductCard: React.FC<ProductCardProps> = async ({ id, className }) => {
+  const product = await getSingleProduct(id);
 
   return (
     <Card

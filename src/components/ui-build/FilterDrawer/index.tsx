@@ -10,6 +10,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import FilterTab from "@/components/sections/Shop/FilterTab";
 
 const FilterDrawer = () => {
   return (
@@ -18,7 +19,7 @@ const FilterDrawer = () => {
         <SlidersHorizontal className="size-4 rotate-90 text-black/40" />
       </DrawerTrigger>
 
-      <DrawerContent className="lg:hidden">
+      <DrawerContent className="lg:hidden pb-6">
         <DrawerHeader className="flex items-center justify-between">
           <DrawerTitle>Filter</DrawerTitle>
 
@@ -27,12 +28,16 @@ const FilterDrawer = () => {
           </DrawerClose>
         </DrawerHeader>
 
-        <DrawerFooter>
+        <div className="px-4">
+          <FilterTab />
+        </div>
+
+        {/* <DrawerFooter>
           <Button>Submit</Button>
           <DrawerClose>
             <Button variant="outline">Cancel</Button>
           </DrawerClose>
-        </DrawerFooter>
+        </DrawerFooter> */}
       </DrawerContent>
     </Drawer>
   );
