@@ -25,7 +25,7 @@ const ProductCard: React.FC<ProductCardProps> = async ({
         className,
       )}
     >
-      <Link href={`/shop/item/${id}`} className="block">
+      <Link href={`/item/${id}`} className="block">
         <figure className="relative mb-4 h-[10.875rem] w-[10.75rem] overflow-hidden rounded-[1.25rem] bg-[#F0EEED] md:h-[18.625rem] md:w-[18.4375rem]">
           <Image
             fill
@@ -38,7 +38,7 @@ const ProductCard: React.FC<ProductCardProps> = async ({
       </Link>
 
       <CardHeader>
-        <Link href={`/shop/item/${id}`} className="block">
+        <Link href={`/item/${id}`} className="block">
           <CardTitle className="line-clamp-1 text-base md:text-xl">
             {product.title}
           </CardTitle>

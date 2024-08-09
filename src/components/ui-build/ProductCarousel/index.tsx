@@ -17,7 +17,7 @@ interface Props {
 }
 const ProductCarousel: React.FC<Props> = ({ products }) => {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
+    Autoplay({ delay: 1000, stopOnInteraction: true }),
   );
 
   return (
@@ -28,7 +28,7 @@ const ProductCarousel: React.FC<Props> = ({ products }) => {
       onMouseLeave={plugin.current.reset}
     >
       <CarouselContent className="ml-0 gap-4">
-        {products?.map(({ id, title, price, description, images }) => {
+        {products?.map(({ id, images }) => {
           const source = images[0];
           return (
             <CarouselItem
